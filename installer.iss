@@ -14,15 +14,15 @@ AppId={{AFD3868E-F422-4CAA-9598-CDF8CF60C2BA}
 DefaultGroupName=AI Usage Monitor v2
 #endif
 AppName=AI Usage Monitor v2
-AppVersion=2.2.0
-AppVerName=AI Usage Monitor 2.2.0
+AppVersion=2.2.1
+AppVerName=AI Usage Monitor 2.2.1
 DefaultDirName={localappdata}\Programs\AIUsageMonitorV2
 PrivilegesRequired=lowest
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0.19041
 OutputDir={#OutputPath}
-OutputBaseFilename=AIUsageMonitorSetup_v2.2.0
+OutputBaseFilename=AIUsageMonitorSetup_v2.2.1
 SetupIconFile=assets\app.ico
 UninstallDisplayIcon={app}\AIUsageMonitor.exe
 #ifdef QATest
@@ -37,7 +37,7 @@ DisableProgramGroupPage=yes
 Compression=lzma2/fast
 SolidCompression=yes
 CloseApplications=no
-VersionInfoVersion=2.2.0.0
+VersionInfoVersion=2.2.1.0
 VersionInfoDescription=AI Usage Monitor bilingual setup
 
 [Languages]

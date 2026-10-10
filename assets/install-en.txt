@@ -1,4 +1,4 @@
-AI Usage Monitor v2.1
+AI Usage Monitor v2.2.1
 
 New: tray support, an edge-docking floating window, and automatic saved-session recovery. Minimize or Close hides to tray by default; right-click the tray to Quit application. Drag the floating window to either screen edge to auto-hide, and hover to expand. Repeated sign-in is not needed unless authorization expires or you sign out.
 
@@ -11,3 +11,7 @@ Claude Code: install and sign in to the latest official Claude Code. Enable the 
 Language: the installer selection becomes the app language. You can change the language in the app; reopen it to apply the change.
 
 Uninstall through Windows Installed apps. Local history and the separate Codex sign-in profile are retained. Sign out in the app first if you want to remove the saved sign-in.
+
+
+Qt/PySide6 LGPLv3: corresponding sources and library replacement instructions are available in DEPENDENCY_BUILD.md and the GitHub Release. 依赖源码与库替换说明随发行版提供。
+https://github.com/RanchengBi/AI-usage-monitor/releases/tag/v2.2.1

@@ -53,7 +53,7 @@ def main():
         shutil.copy2(DIST / "UsageBridge/UsageBridge.exe", app_dist / "UsageBridge.exe")
         shutil.copytree(DIST / "UsageBridge/_bridge_internal", app_dist / "_bridge_internal", dirs_exist_ok=True)
         for name in ("README.md", "README.zh-CN.md", "README.en.md", "LICENSE", "SECURITY.md",
-                     "THIRD_PARTY_NOTICES.md", "LICENSE_REVIEW.md", "UPLOAD_GITHUB.md", "SHARING_AUDIT.md", "CHANGELOG.md"):
+                     "THIRD_PARTY_NOTICES.md", "DEPENDENCY_BUILD.md", "DEPENDENCY_SOURCES.json", "LICENSE_REVIEW.md", "UPLOAD_GITHUB.md", "SHARING_AUDIT.md", "CHANGELOG.md"):
             shutil.copy2(ROOT / name, app_dist / name)
         # License texts accompany the unmodified, dynamically linked Qt libraries.
         pyside = Path(__import__("PySide6").__file__).parent
@@ -73,6 +73,22 @@ def main():
     # freezer can incorrectly collect it and shadow the Windows implementation.
     # Use the supported Windows OS DLL rather than redistributing that collision.
     internal = DIST / "AIUsageMonitor" / "_internal"
+    # This Widgets application uses only QtBase. Restrict auto-collected plugins
+    # and libraries so optional PDF/QML/virtual-keyboard modules are not shipped.
+    qt_root = internal / 'PySide6'
+    # The Widgets UI does not use the optional software OpenGL rasterizer.
+    (qt_root / 'opengl32sw.dll').unlink(missing_ok=True)
+    qt_dlls = {'qt6core.dll', 'qt6gui.dll', 'qt6widgets.dll', 'qt6network.dll', 'qt6test.dll'}
+    plugins = {'platforms/qwindows.dll', 'platforms/qminimal.dll', 'platforms/qoffscreen.dll',
+               'styles/qmodernwindowsstyle.dll', 'imageformats/qico.dll', 'imageformats/qjpeg.dll',
+               'imageformats/qgif.dll', 'networkinformation/qnetworklistmanager.dll',
+               'tls/qschannelbackend.dll', 'tls/qcertonlybackend.dll'}
+    for candidate in qt_root.glob('Qt6*.dll'):
+        if candidate.name.lower() not in qt_dlls:
+            candidate.unlink()
+    for candidate in (qt_root / 'plugins').rglob('*.dll'):
+        if candidate.relative_to(qt_root / 'plugins').as_posix().lower() not in plugins:
+            candidate.unlink()
     # The monitor does not use Qt Virtual Keyboard (commercial/GPLv3).
     # QtGui's automatic plugin collection can include it indirectly. Exclude
     # both the unused plugin and library instead of silently shipping it.

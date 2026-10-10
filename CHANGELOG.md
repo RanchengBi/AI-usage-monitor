@@ -1,5 +1,11 @@
 # Changes / 更新记录
 
+## 2.2.1 — 2026-10-10
+
+发布 Windows 安装器，精简无用 Qt 模块，补齐依赖源码、许可告知和中英文直接下载说明。功能与 v2.2.0 相同。
+
+Publishes a Windows installer with a reduced Qt module set, corresponding dependency sources, preserved notices and bilingual direct-download instructions. Application features are unchanged from v2.2.0.
+
 ## 2.2.0 — 2026-10-10
 
 - 中文：修复托盘右键菜单在深色主题下继承深色文字导致的低对比度，菜单及勾选状态有独立配色。新增默认开启的剩余额度 50% / 20% / 10% 通知；按平台、额度窗口和周期去重，重启保留。包括返回的 5 小时和周额度，无套餐名称限制。一次跨多档只提示最紧急档，旧数据和未知额度不提醒。主窗口和托盘均可开关；系统勿扰可能抑制通知。Claude 仍依赖终端状态栏活动。

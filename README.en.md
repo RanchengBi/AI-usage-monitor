@@ -1,4 +1,8 @@
-# AI Usage Monitor v2.2.0
+# AI Usage Monitor v2.2.1
+
+[Download Windows installer](https://github.com/RanchengBi/AI-usage-monitor/releases/download/v2.2.1/AIUsageMonitorSetup_v2.2.1.exe) · [All release assets](https://github.com/RanchengBi/AI-usage-monitor/releases/tag/v2.2.1)
+
+Download and run the EXE; Python is not required. Quit the old app from the tray before updating; settings and sign-in are retained. The installer is unsigned; verify its source and SHA-256 without disabling system protection.
 
 [简体中文](README.zh-CN.md) · [Bilingual home](README.md)
 
@@ -13,7 +17,7 @@ Issues with sanitized reproduction steps and pull requests for code, documentati
 
 “Free” means this project charges no usage fee. MIT still permits commercial use and redistribution under its terms. The project does not provide AI subscriptions, bypass provider limits or represent OpenAI or Anthropic.
 
-This source upload includes no installer or third-party runtime. Use the source instructions below; see the [license review](LICENSE_REVIEW.md) for known binary-release requirements.
+The source repository excludes runtimes. Download the installer and corresponding dependency sources from Releases; see [dependency source and replacement instructions](DEPENDENCY_BUILD.md).
 
 ### New in v2.2: quota alerts and a readable tray menu
 
@@ -35,7 +39,7 @@ v2.1.1 fixes expansion jumping across shared monitor edges and adds a muted char
 
 ### Features and limitations
 
-| Integration | v2.2.0 support |
+| Integration | v2.2.1 support |
 | --- | --- |
 | Codex subscription quotas | Official App Server readings, every 60 seconds; manual refresh and multiple returned windows |
 | Official Codex IDE extension | Usage billed to the same account/workspace subscription is reflected in account limits; do not add it again |
@@ -52,7 +56,7 @@ Remaining percentage is `100 - reported used percentage`. The app does not infer
 
 Requires Windows 10 2004 (19041) or newer / Windows 11, x64.
 
-1. If the maintainer publishes an installer under repository **Releases**, download `AIUsageMonitorSetup_v2.2.0.exe`. GitHub **Download ZIP** provides source only; otherwise use the source instructions below.
+1. [Download the Windows x64 installer AIUsageMonitorSetup_v2.2.1.exe](https://github.com/RanchengBi/AI-usage-monitor/releases/download/v2.2.1/AIUsageMonitorSetup_v2.2.1.exe). GitHub **Download ZIP** provides source only. Ordinary users do not need the third-party-source attachment.
 2. Run setup and select **English** or **简体中文**. Python is bundled; the default per-user installation does not require administrator rights.
 3. Language changes take effect after quitting from the tray menu and reopening the app.
 4. Install official Codex and/or Claude Code clients separately.

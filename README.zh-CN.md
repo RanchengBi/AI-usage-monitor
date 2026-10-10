@@ -1,4 +1,10 @@
-# AI Usage Monitor v2.2.0
+# AI Usage Monitor v2.2.1
+
+[下载 Windows 安装包 / Download Windows installer](https://github.com/RanchengBi/AI-usage-monitor/releases/download/v2.2.1/AIUsageMonitorSetup_v2.2.1.exe) · [全部发行附件 / Release assets](https://github.com/RanchengBi/AI-usage-monitor/releases/tag/v2.2.1)
+
+普通用户下载 EXE 安装即可，无需 Python。先从托盘退出旧版，再覆盖安装；保留登录和设置。安装包尚未签名，请核对来源及 SHA-256，不要关闭系统安全防护。
+
+Download and run the EXE; Python is not required. Quit the old app from the tray before updating; settings and sign-in are retained. The installer is unsigned; verify its source and SHA-256 without disabling system protection.
 
 [English](README.en.md) · [双语首页](README.md)
 
@@ -13,7 +19,7 @@
 
 “免费”指本项目不收使用费；MIT 仍允许遵守许可条件的商业使用和再分发。本项目不提供 AI 订阅、不绕过平台额度，也不代表 OpenAI 或 Anthropic。
 
-本次源码上传包不附安装器或第三方运行库。先按下文从源码运行；二进制发布的已知许可事项见 [许可检查](LICENSE_REVIEW.md)。
+源码仓库不存放运行库；可运行安装器及对应第三方源码在 Releases 单独下载，见 [依赖源码与替换说明](DEPENDENCY_BUILD.md)。
 
 ### v2.2 新增：额度提醒与清晰托盘菜单
 
@@ -35,7 +41,7 @@ v2.1.1 修复双屏交界处展开悬浮窗时跳屏的问题，并采用更柔�
 
 ### 功能与支持范围
 
-| 功能 | v2.2.0 支持情况 |
+| 功能 | v2.2.1 支持情况 |
 | --- | --- |
 | Codex 订阅额度 | 通过官方 App Server 读取，每 60 秒刷新；支持手动刷新及多个额度窗口 |
 | Codex 官方 IDE 插件用量 | 同一账号、工作空间及订阅计费范围内的使用反映在账号额度中，无需重复相加 |
@@ -52,7 +58,7 @@ v2.1.1 修复双屏交界处展开悬浮窗时跳屏的问题，并采用更柔�
 
 系统要求：Windows 10 2004（19041）或更新版本、Windows 11，x64。
 
-1. 若维护者在仓库 **Releases** 发布了安装包，下载 `AIUsageMonitorSetup_v2.2.0.exe`。GitHub **Download ZIP** 仅提供源码；若没有安装包，请按后文从源码运行。
+1. [下载 Windows x64 安装包 AIUsageMonitorSetup_v2.2.1.exe](https://github.com/RanchengBi/AI-usage-monitor/releases/download/v2.2.1/AIUsageMonitorSetup_v2.2.1.exe)。GitHub **Download ZIP** 仅提供源码。普通用户无需下载第三方源码附件。
 2. 双击安装器，选择 **简体中文** 或 **English**。无需另装 Python，默认按当前用户安装，无需管理员权限。
 3. 语言可在程序右上角修改，从托盘退出程序并重新打开后生效。
 4. 分别安装所需的官方 Codex、Claude Code 客户端。本项目不附带这两个客户端。

@@ -1,6 +1,12 @@
 # GitHub sharing review / GitHub 分享检查记录
 
-## Reviewed source upload / 本次源码上传复核（2026-10-10）
+## v2.2.1 release scope / 本次发布范围（2026-10-10）
+
+本次发布 Windows 安装器、应用源码和对应第三方源码，许可材料与库替换说明见 DEPENDENCY_BUILD.md。源代码从明确的仓库文件清单导出，安装器从干净构建目录生成，不复制用户账号、日志、数据库或使用记录。不附真实使用截图和 Windows 字体文件。保留上游署名及公开联系信息。下方 v2.2.0 及以前条目属于历史记录，其“仅交付源码”范围不适用于本次发行版。
+
+This release contains a Windows installer, application source and corresponding third-party source. See DEPENDENCY_BUILD.md for licenses and library replacement. Application source is exported from the repository file list; the installer comes from a clean build without user accounts, logs, databases or usage history. Real usage screenshots and Windows font files are excluded. Upstream attribution and public contact details are preserved. Earlier entries below are historical; their source-only delivery scope does not describe this release.
+
+## Historical v2.2.0 source review / 历史源码上传复核（2026-10-10）
 
 - 对当前源码及最终 ZIP 检查个人用户名/路径、常见 API Key、访问令牌、JWT、私钥、邮箱及可疑运行文件；不把匹配到的私密原文写入公开报告。可发布源码未发现用户个人资料或实际凭据。邮箱命中是原始译者及 Python 许可公开署名，保留。
 - 本地 Python 缓存确实含开发机绝对路径；最终包用明确清单导出，排除所有缓存、账号、日志、数据库、CSV、真实截图和 .git。不要直接上传整个工作目录。
