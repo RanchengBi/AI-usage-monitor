@@ -1,0 +1,13 @@
+AI Usage Monitor v2.1
+
+New: tray support, an edge-docking floating window, and automatic saved-session recovery. Minimize or Close hides to tray by default; right-click the tray to Quit application. Drag the floating window to either screen edge to auto-hide, and hover to expand. Repeated sign-in is not needed unless authorization expires or you sign out.
+
+This installer includes the application and Python/Qt runtime. You do not need to install Python.
+
+Codex: install the official Codex CLI or desktop app first. The monitor detects codex.exe or lets you select it. Sign in through the official browser page. The monitor keeps a separate Codex sign-in profile.
+
+Claude Code: install and sign in to the latest official Claude Code. Enable the usage connection in the monitor, restart Claude Code, then use it normally. The status-line feed updates during activity; this is not background polling of your Claude account. Pro/Max quotas appear only when Claude Code supplies them. Existing status-line settings require your confirmation before replacement and are backed up.
+
+Language: the installer selection becomes the app language. You can change the language in the app; reopen it to apply the change.
+
+Uninstall through Windows Installed apps. Local history and the separate Codex sign-in profile are retained. Sign out in the app first if you want to remove the saved sign-in.
